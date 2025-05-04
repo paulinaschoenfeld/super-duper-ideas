@@ -1,0 +1,51 @@
+.accordion {
+  background-color: #ffffff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+.content {
+  overflow: hidden;
+  transition: height 0.3s ease;
+
+  .inner {
+    font-size: 1.2rem;
+    border-top: 1px solid lightgray;
+    margin: 1rem 0 1rem;
+    padding-top: 1rem;
+  }
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+sdi-icon {
+  transition: transform 0.2s ease;
+
+  &.rotate {
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+  }
+
+  &.favorite {
+    color: red;
+  }
+}

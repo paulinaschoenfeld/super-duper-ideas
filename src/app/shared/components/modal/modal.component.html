@@ -1,0 +1,9 @@
+<div class="modal-overlay" [class.closing]="isClosing" (click)="close()">
+  <div class="modal-content" [class.closing]="isClosing" (click)="$event.stopPropagation()" cdkTrapFocus>
+    <div class="modal-header">
+      <div class="modal-title">{{ title }}</div>
+      <sdi-icon name="close" (click)="close()"></sdi-icon>
+    </div>
+    <ng-content></ng-content>
+  </div>
+</div>

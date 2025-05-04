@@ -1,0 +1,25 @@
+<div class="accordion">
+  <div class="title" (click)="toggle()">
+    <div>
+      {{ idea.title }}
+    </div>
+    <div class="icons">
+      <sdi-icon name="pencil"></sdi-icon>
+      @if (idea.favorite) {
+        <sdi-icon name="heartFilled" class="favorite"></sdi-icon>
+      } @else {
+        <sdi-icon name="heart"></sdi-icon>
+      }
+      <sdi-icon name="chevron" [class.rotate]="isOpen"></sdi-icon>
+    </div>
+  </div>
+  @if(isOpen) {
+    <div class="content" [@accordionToggle]>
+      <div class="inner">
+        {{ idea.description }}
+      </div>
+    </div>
+  }
+</div>
+
+
