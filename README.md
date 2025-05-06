@@ -1,74 +1,76 @@
 # Super Duper Ideas List
 
-Prosty projekt Angularowy do ćwiczeń frontendowych z nowoczesnym podejściem (Angular 19.2, SCSS, Signals, animacje, modale).  
-Aplikacja służy do przechowywania i zarządzania pomysłami w stylu "idea board".
+A simple Angular project for frontend practice using a modern approach (Angular 19.2, SCSS, Signals, animations, modals).  
+The app serves as a lightweight “idea board” for storing and managing your ideas.
 
 ---
 
-## ✨ Funkcje
+## ✨ Features
 
-- Dodawanie nowych pomysłów przez **modal z formularzem**
-- Przeglądanie listy pomysłów w formie **akordeonów**
-- Rozwijanie akordeonu pokazuje szczegóły pomysłu
-- **Edycja** i **usuwanie** pomysłów
-- Oznaczanie pomysłów jako **ulubione**
-- **Filtrowanie/sortowanie** listy
-- Zapis danych w **localStorage**
-- Obsługa **deep linków** (`/ideas?id=42`) – automatyczne rozwinięcie i scroll
+- Add new ideas via a **modal form**
+- Browse the list in an **accordion-style layout**
+- Expanding an accordion reveals idea details
+- **Edit** and **delete** existing ideas
+- Mark ideas as **favorites**
+- **Filter/sort** the idea list
+- Data saved in **localStorage**
+- **Deep linking** (`/ideas?id=42`) – automatically expands and scrolls to the item
 
 ---
 
-## ⚙️ Technologie i podejście
+## ⚙️ Technologies & Approach
 
 - Angular `19.2`
-- SCSS jako preprocesor
-- Nowa składnia szablonów: `@if`, `@for`
-- Signals (tam, gdzie mają sens)
-- Brak bibliotek UI (modal tworzony własnoręcznie)
-- Angular Animations do akordeonów i modali
-- Podejście single-page (bez przechodzenia między widokami)
+- SCSS as preprocessor
+- New template syntax: `@if`, `@for`
+- Signals (used where appropriate)
+- No external UI libraries (custom modal implementation)
+- Angular Animations for accordion and modal transitions
+- Single-page structure (no route switching between views)
 
 ---
 
-## 📁 Struktura komponentów (planowana)
+## 📁 Component Structure (planned)
 
-- `IdeasListComponent` – główny widok listy
-- `IdeaItemComponent` – pojedynczy akordeon
-- `IdeaFormModalComponent` – modal z formularzem
-- `IdeaService` – logika danych (localStorage)
-- (opcjonalnie) `IdeaPreviewModalComponent` – podgląd z poziomu modala
-
----
-
-## 🧠 Cele edukacyjne
-
-- Praktyka nowoczesnego Angulara
-- Praca z własnym modalem i animacjami
-- Zarządzanie danymi bez backendu
-- Obsługa routingu i linkowania do elementów na stronie
-- Lepsze zrozumienie `signals`, `@if`, `@for`
+- `IdeasListComponent` – main idea list view
+- `IdeaItemComponent` – single accordion item
+- `IdeaFormModalComponent` – modal with form
+- `IdeaService` – data logic (localStorage)
+- (optional) `IdeaPreviewModalComponent` – preview modal for idea details
 
 ---
 
-## ✅ TODO (na start)
+## 🧠 Learning Goals
 
-- [x] Zmiana projektu na SCSS
-- [ ] Własny modal z formularzem
-- [x] Akordeonowa lista z animacją
-- [ ] Obsługa localStorage
-- [ ] Deep linking po ID z automatycznym scrollowaniem
-- [ ] Filtr / sortowanie pomysłów
+- Practice modern Angular features
+- Build a custom modal with animations
+- Manage data without backend
+- Handle routing and deep-linking within a single-page app
+- Get familiar with `signals`, `@if`, and `@for`
 
 ---
 
-## 🌟 Nice to have (in the future)
+## ✅ TODO (initial)
 
-- [ ] Eksport listy pomysłów do pliku `.json`
-- [ ] Import listy z pliku `.json` do aplikacji
-- [ ] Automatyczne tworzenie backupu w localStorage
-- [ ] Podgląd pomysłu w osobnym modalu (zamiast tylko w akordeonie)
-- [ ] Kategorie / tagi pomysłów
-- [ ] Sortowanie drag & drop (np. Angular CDK)
+- [x] Switch project to SCSS
+- [ ] Custom modal with form
+- [x] Accordion list with animation
+- [ ] localStorage support
+- [ ] Deep linking by ID with auto-scrolling
+- [ ] Idea filtering/sorting
+- [ ] Dark mode support
+- [ ] Multi-language support (with user language switcher)
+
+---
+
+## 🌟 Nice to have (future plans)
+
+- [ ] Export idea list to `.json`
+- [ ] Import idea list from `.json`
+- [ ] Automatic localStorage backup
+- [ ] Preview idea in dedicated modal (instead of just in accordion)
+- [ ] Add categories/tags to ideas
+- [ ] Drag & drop sorting (e.g. via Angular CDK)
 
 ---
 
