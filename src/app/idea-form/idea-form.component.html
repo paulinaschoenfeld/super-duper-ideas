@@ -1,0 +1,19 @@
+<form class="idea-form">
+  <div class="input-box">
+    <label for="name">Super nazwa pomysłu</label>
+    <input type="text" id="name" name="name" [(ngModel)]="name" required />
+  </div>
+  <div class="input-box">
+    <label for="description">Opis</label>
+    <textarea id="description" name="description" [(ngModel)]="description" required></textarea>
+  </div>
+  <div class="checkbox-box">
+    <input type="checkbox" id="favorite" name="favorite" [(ngModel)]="favorite" />
+    <label for="favorite">Oznacz jako ulubiony</label>
+  </div>
+
+  <div class="actions">
+    <sdi-button type="cancel" label="Nieważne..." (onClick)="onCancel.emit()"></sdi-button>
+    <sdi-button type="action" label="Zapisz" (onClick)="saveIdea()"></sdi-button>
+  </div>
+</form>

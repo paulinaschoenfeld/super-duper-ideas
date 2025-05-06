@@ -1,9 +1,6 @@
 <div class="ideas-list">
   <div class="filter-section">
-    <button class="action" [class.clicked]="isBouncing" (click)="addIdea()">
-      <sdi-icon name="add"></sdi-icon>
-      <span>Dodaj nowy pomysł</span>
-    </button>
+    <sdi-button type="action" icon="add" label="Dodaj nowy pomysł" (onClick)="addIdea()"></sdi-button>
   </div>
   @for (idea of ideas; track idea.id) {
     <sdi-accordion [idea]="idea"></sdi-accordion>
@@ -11,5 +8,7 @@
 </div>
 
 @if (isModalOpen) {
-  <sdi-modal title="Dodaj nowy pomysł" (onClose)="isModalOpen = false"> allalallalalalala</sdi-modal>
+  <sdi-modal title="Dodaj nowy pomysł" (onClose)="isModalOpen = false" [disableEscClose]="true" [disableBackdropClose]="true">
+    <sdi-idea-form (onSave)="saveIdea($event)" (onCancel)="isModalOpen = false"></sdi-idea-form>
+  </sdi-modal>
 }

@@ -1,4 +1,4 @@
-<div class="modal-overlay" [class.closing]="isClosing" (click)="close()">
+<div class="modal-overlay" [class.closing]="isClosing" (click)="disableBackdropClose ? null : close()">
   <div class="modal-content" [class.closing]="isClosing" (click)="$event.stopPropagation()" cdkTrapFocus>
     <div class="modal-header">
       <div class="modal-title">{{ title }}</div>

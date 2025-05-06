@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, EventEmitter, HostListener, Input, OnDestroy, Output} from '@angular/core';
+import {Component, EventEmitter, HostListener, Input, Output} from '@angular/core';
 import {IconComponent} from '../icon/icon.component';
 import {CdkTrapFocus} from '@angular/cdk/a11y';
 
@@ -13,13 +13,17 @@ import {CdkTrapFocus} from '@angular/cdk/a11y';
 })
 export class ModalComponent {
   @Input() title!: string;
+  @Input() disableEscClose: boolean = false;
+  @Input() disableBackdropClose: boolean = false;
   @Output() onClose = new EventEmitter();
   public isClosing: boolean = false;
 
   @HostListener('window:keyup.esc', ['$event'])
   onEsc(event: KeyboardEvent) {
-    event.preventDefault();
-    this.close();
+    if (!this.disableEscClose) {
+      event.preventDefault();
+      this.close();
+    }
   }
 
   public close() {

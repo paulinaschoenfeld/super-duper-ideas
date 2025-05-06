@@ -6,40 +6,22 @@ body {
   font-family: system-ui, sans-serif;
 }
 
-button {
-  cursor: pointer;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  font-weight: 500;
+input,
+textarea {
+  padding: 0.5rem 0.75rem;
   border-radius: 0.5rem;
-  gap: 0.5rem;
-  transition: background-color 0.2s ease;
+  border: 1px solid #9ca3af;
+  color: #111827;
 
-  sdi-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-
-  &.action {
-    background-color: #fff7ed;  // orange-50
-    color: #c2410c;             // orange-700
-    border: 1px solid #fdba74;  // orange-300
-
-    &:hover {
-      background-color: #ffedd5;   // trochę mocniejszy na hover
-    }
+  &:focus {
+    outline: none;
+    border-color: #fb923c; // pomarańczowy (orange-400)
+    box-shadow: 0 0 0 3px rgba(251, 146, 60, 0.3); // soft glow
   }
 }
 
-@keyframes bounce-scale {
-  0%   { transform: scale(1); }
-  30%  { transform: scale(0.9); }
-  60%  { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-button.clicked {
-  animation: bounce-scale 300ms ease;
+input[type="checkbox"] {
+  accent-color: #fed7aa; // pomarańczowy (orange-200)
+  height: 1.25rem;
+  width: 1.25rem;
 }
