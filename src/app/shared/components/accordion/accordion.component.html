@@ -4,7 +4,7 @@
       {{ idea.title }}
     </div>
     <div class="icons">
-      <sdi-icon name="pencil"></sdi-icon>
+      <sdi-button variant="icon" icon="pencil" (onClick)="editItem()"></sdi-button>
       @if (idea.favorite) {
         <sdi-icon name="heartFilled" class="favorite"></sdi-icon>
       } @else {

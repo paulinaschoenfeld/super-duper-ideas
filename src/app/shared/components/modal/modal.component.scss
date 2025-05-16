@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -11,7 +13,7 @@
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: $surface-background;
   padding: 2rem;
   border-radius: 15px;
   min-width: 40%;

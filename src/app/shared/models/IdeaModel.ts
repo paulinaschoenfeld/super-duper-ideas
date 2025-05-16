@@ -1,5 +1,5 @@
 export interface IdeaModel {
-  id: number;
+  id: number; // timestamp
   title: string;
   description: string;
   favorite: boolean;

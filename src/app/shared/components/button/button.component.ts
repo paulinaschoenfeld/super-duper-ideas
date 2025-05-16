@@ -11,9 +11,11 @@ import {ICONS} from '../icon/icons';
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
-  @Input() type!: 'action' | 'cancel';
+  @Input() variant!: 'action' | 'cancel' | 'icon';
   @Input() label: string = '';
   @Input() icon: keyof typeof ICONS | undefined;
+  @Input() disabled: boolean = false;
+  @Input() type: 'button' | 'submit' | 'reset' = 'button';
   @Output() onClick = new EventEmitter();
 
   public isBouncing: boolean = false;

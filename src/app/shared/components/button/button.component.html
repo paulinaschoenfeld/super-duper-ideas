@@ -1,4 +1,4 @@
-<button [class]="type" [class.clicked]="isBouncing" (click)="clicked()">
+<button [class]="variant" [class.clicked]="isBouncing" [disabled]="disabled" (click)="clicked()">
   @if (icon) {
     <sdi-icon [name]="icon"></sdi-icon>
   }

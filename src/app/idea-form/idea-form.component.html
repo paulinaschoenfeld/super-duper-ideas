@@ -1,19 +1,19 @@
-<form class="idea-form">
+<form class="idea-form" [formGroup]="ideaForm" (ngSubmit)="saveIdea()">
   <div class="input-box">
-    <label for="name">Super nazwa pomysłu</label>
-    <input type="text" id="name" name="name" [(ngModel)]="name" required />
+    <label for="title">Super nazwa pomysłu</label>
+    <input type="text" id="title" formControlName="title" />
   </div>
   <div class="input-box">
     <label for="description">Opis</label>
-    <textarea id="description" name="description" [(ngModel)]="description" required></textarea>
+    <textarea id="description" name="description" formControlName="description"></textarea>
   </div>
   <div class="checkbox-box">
-    <input type="checkbox" id="favorite" name="favorite" [(ngModel)]="favorite" />
+    <input type="checkbox" id="favorite" name="favorite" formControlName="favorite" />
     <label for="favorite">Oznacz jako ulubiony</label>
   </div>
 
   <div class="actions">
-    <sdi-button type="cancel" label="Nieważne..." (onClick)="onCancel.emit()"></sdi-button>
-    <sdi-button type="action" label="Zapisz" (onClick)="saveIdea()"></sdi-button>
+    <sdi-button variant="cancel" label="Nieważne..." (onClick)="onCancel.emit()"></sdi-button>
+    <sdi-button variant="action" label="Zapisz" [type]="'submit'" [disabled]="!ideaForm.valid"></sdi-button>
   </div>
 </form>

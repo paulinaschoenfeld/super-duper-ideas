@@ -1,14 +1,14 @@
 <div class="ideas-list">
   <div class="filter-section">
-    <sdi-button type="action" icon="add" label="Dodaj nowy pomysł" (onClick)="addIdea()"></sdi-button>
+    <sdi-button variant="action" icon="add" label="Dodaj nowy pomysł" (onClick)="addIdea()"></sdi-button>
   </div>
   @for (idea of ideas; track idea.id) {
-    <sdi-accordion [idea]="idea"></sdi-accordion>
+    <sdi-accordion [idea]="idea" (onEdit)="editIdea($event)"></sdi-accordion>
   }
 </div>
 
 @if (isModalOpen) {
   <sdi-modal title="Dodaj nowy pomysł" (onClose)="isModalOpen = false" [disableEscClose]="true" [disableBackdropClose]="true">
-    <sdi-idea-form (onSave)="saveIdea($event)" (onCancel)="isModalOpen = false"></sdi-idea-form>
+    <sdi-idea-form (onSave)="saveIdea($event)" (onCancel)="isModalOpen = false" [idea]="ideaToEdit"></sdi-idea-form>
   </sdi-modal>
 }

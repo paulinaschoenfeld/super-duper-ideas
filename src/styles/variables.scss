@@ -1,0 +1,26 @@
+$accent-text: #b45309;
+$accent-background: #ffedd5;
+$accent-hover: #fed7aa;
+$accent-border: #fb923c;
+$accent-focus: #f97316;
+$accent-shadow: rgba(249, 115, 22, 0.4);
+$accent-focus-shadow: 0 0 0 3px rgba(251, 146, 60, 0.3);
+
+$neutral-text: #374151;
+$neutral-background: #f9fafb;
+$neutral-hover: #f3f4f6;
+$neutral-border: #e5e7eb;
+$neutral-focus: #d1d5db;
+$neutral-shadow: rgba(209, 213, 219, 0.4);
+$neutral-focus-shadow: 0 0 0 3px rgba(209, 213, 219, 0.3);
+
+$background-light: #f9fafb;
+$background-dark: #111827;
+$text-color: #111827;
+$text-muted: #6b7280;
+$surface-background: #fff;
+
+$form-border: #9ca3af;
+$form-border-hover: #6b7280;
+$form-border-focus: $accent-focus;
+$form-focus-shadow: $accent-focus-shadow;

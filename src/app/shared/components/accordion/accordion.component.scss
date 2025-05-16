@@ -1,5 +1,7 @@
+@use 'variables' as *;
+
 .accordion {
-  background-color: #ffffff;
+  background-color: $surface-background;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   border: 1px solid lightgray;
   border-radius: 15px;
@@ -34,6 +36,7 @@
 
 .icons {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
