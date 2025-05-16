@@ -3,7 +3,7 @@
     <sdi-button variant="action" icon="add" label="Dodaj nowy pomysł" (onClick)="addIdea()"></sdi-button>
   </div>
   @for (idea of ideas; track idea.id) {
-    <sdi-accordion [idea]="idea" (onEdit)="editIdea($event)"></sdi-accordion>
+    <sdi-accordion [idea]="idea" (onEdit)="editIdea($event)" (onFavorite)="toggleFavorite(idea)"></sdi-accordion>
   }
 </div>
 

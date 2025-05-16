@@ -1,6 +1,6 @@
 <button [class]="variant" [class.clicked]="isBouncing" [disabled]="disabled" (click)="clicked()">
   @if (icon) {
-    <sdi-icon [name]="icon"></sdi-icon>
+    <sdi-icon [name]="icon" [color]="iconColor"></sdi-icon>
   }
   @if (label) {
     <span>{{ label }}</span>

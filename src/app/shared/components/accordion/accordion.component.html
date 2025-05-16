@@ -1,14 +1,14 @@
-<div class="accordion">
-  <div class="title" (click)="toggle()">
+<div class="accordion" (click)="toggle()">
+  <div class="title">
     <div>
       {{ idea.title }}
     </div>
     <div class="icons">
       <sdi-button variant="icon" icon="pencil" (onClick)="editItem()"></sdi-button>
       @if (idea.favorite) {
-        <sdi-icon name="heartFilled" class="favorite"></sdi-icon>
+        <sdi-button variant="icon" icon="heartFilled" iconColor="red" (onClick)="toggleFavorite()"></sdi-button>
       } @else {
-        <sdi-icon name="heart"></sdi-icon>
+        <sdi-button variant="icon" icon="heart" (onClick)="toggleFavorite()"></sdi-button>
       }
       <sdi-icon name="chevron" [class.rotate]="isOpen"></sdi-icon>
     </div>
