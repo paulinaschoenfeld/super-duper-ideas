@@ -31,6 +31,7 @@ export class AccordionComponent {
     this.isOpen = value;
   };
   @Output() onEdit: EventEmitter<IdeaModel> = new EventEmitter();
+  @Output() onFavorite: EventEmitter<IdeaModel> = new EventEmitter();
 
   public isOpen: boolean = false;
 
@@ -40,5 +41,9 @@ export class AccordionComponent {
 
   public editItem() {
     this.onEdit.emit(this.idea);
+  }
+
+  public toggleFavorite() {
+    this.onFavorite.emit(this.idea);
   }
 }

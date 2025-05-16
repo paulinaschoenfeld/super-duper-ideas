@@ -53,9 +53,9 @@ The app serves as a lightweight “idea board” for storing and managing your i
 ## ✅ TODO (initial)
 
 - [x] Switch project to SCSS
-- [ ] Custom modal with form
+- [x] Custom modal with form
 - [x] Accordion list with animation
-- [ ] localStorage support
+- [x] localStorage support
 - [ ] Deep linking by ID with auto-scrolling
 - [ ] Idea filtering/sorting
 - [ ] Dark mode support

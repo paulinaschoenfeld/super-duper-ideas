@@ -34,9 +34,14 @@ export class IdeasComponent implements  OnInit {
   }
 
   public editIdea(idea: IdeaModel) {
-    console.log('edit idea', idea);
     this.ideaToEdit = idea;
     this.isModalOpen = true;
+  }
+
+  public toggleFavorite(idea: IdeaModel) {
+    idea.favorite = !idea.favorite;
+    this.updateItem(idea);
+    this.ideasService.updateIdeas(this.ideas);
   }
 
   public saveIdea(idea: IdeaModel) {
